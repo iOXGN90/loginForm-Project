@@ -11,11 +11,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Landing" screenOptions={
-        {
-          headerShown: false,
-        }
-      }>
+      <Stack.Navigator initialRouteName="Landing" screenOptions={{headerShown: false,}}>
         <Stack.Screen name="Landing" component={LandingPage}/>
         <Stack.Screen name="Login" component={LoginPage}/>
         <Stack.Screen name="Signup" component={SignupPage}/>
@@ -23,7 +19,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -32,3 +27,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+// backgroundColor:'#E8EAED', // Gray
+// backgroundColor: '#55bCF6', // Blue
