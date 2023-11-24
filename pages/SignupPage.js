@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 
-function SignupPage() {
+const LoginPage = () => {
   return (
-    <div>SignupPage</div>
+    <View>
+      <TextInput>
+        Amang kokak
+      </TextInput>
+    </View>
   )
 }
 
-export default SignupPage
+const styles = StyleSheet.create({
+  
+})
+
+export default LoginPage

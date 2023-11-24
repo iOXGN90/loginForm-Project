@@ -1,19 +1,30 @@
-import React from 'react'
+import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 function LandingPage() {
+    const navigation = useNavigation();
+    const handleLoginPress = () => {
+    // Navigate to the Login page
+    navigation.navigate('Login_Prototype')
+    };
+    const handleSignupPress = () => {
+    navigation.navigate('Signup')
+    };
+
   return (
+
     <View style={styles.container}>
         <Text style={styles.welcomeText}>
             Hello, welcome to our application!
         </Text>
         <View style={styles.loginsignup}>
-            <TouchableOpacity style={styles.loginButton}>
+            <TouchableOpacity style={styles.loginButton} onPress={handleLoginPress}>
                 <Text style={styles.loginText}>
                     Login
                 </Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.signupButton}>
+            <TouchableOpacity style={styles.signupButton} onPress={handleSignupPress}>
                 <Text style={styles.SignupText}>
                     Signup
                 </Text>
@@ -27,6 +38,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         height: '100%',
+        backgroundColor: '#ffffff',
     },
     loginsignup:{
         marginTop: 15,
