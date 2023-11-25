@@ -15,6 +15,7 @@ const Login = () => {
 
     const forgotPass = () => {
         console.log('forgot password is pressed');
+        navigation.navigate('AccountRecovery')
     };
 
   return (
@@ -38,7 +39,7 @@ const Login = () => {
                     autoCapitalize='none'
                 />
                 <TouchableOpacity onPress={forgotPass}>
-                    <Text style={styles.forgotpassButton}>
+                    <Text style={styles.forgotpassButton} onPress={forgotPass}>
                         Forgot Password
                     </Text>
                 </TouchableOpacity>
@@ -89,8 +90,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'white'
     },
     forgotpassButton:{
+        fontWeight: 'bold',
         textAlign: 'right',
         width: 340,
+        height:'auto',
         fontSize: 17,
     },
     loginButton:{

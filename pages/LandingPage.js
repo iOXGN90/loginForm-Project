@@ -16,7 +16,7 @@ function LandingPage() {
 
     <View style={styles.container}>
         <Text style={styles.welcomeText}>
-            Hello, welcome to our application!
+            Welcome to the App!
         </Text>
         <View style={styles.loginsignup}>
             <TouchableOpacity style={styles.loginButton} onPress={handleLoginPress}>
