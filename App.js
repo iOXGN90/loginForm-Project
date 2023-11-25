@@ -7,6 +7,7 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import Login_Prototype from './pages/Login_Prototype';
 import AccountRecoveryPage from './pages/AccountRecoveryPage';
+import AccountRecoveryConfirmation from './pages/AccountRecoveryConfirmationPage';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen name="Login_Prototype" component={Login_Prototype}/>
         <Stack.Screen name="Signup" component={SignupPage}/>
         <Stack.Screen name="AccountRecovery" component={AccountRecoveryPage}/>
+        <Stack.Screen name="Account_Recovery_Confirmation" component={AccountRecoveryConfirmation}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

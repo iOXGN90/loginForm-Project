@@ -39,7 +39,7 @@ const Login = () => {
                     autoCapitalize='none'
                 />
                 <TouchableOpacity onPress={forgotPass}>
-                    <Text style={styles.forgotpassButton} onPress={forgotPass}>
+                    <Text style={styles.forgotpassButton}>
                         Forgot Password
                     </Text>
                 </TouchableOpacity>
@@ -54,7 +54,7 @@ const Login = () => {
                     </Text>
                     <TouchableOpacity style={styles.signupButton}>
                         <Text style={styles.signupText}>
-                             Signup
+                             Sign up now!
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -93,12 +93,13 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'right',
         width: 340,
-        height:'auto',
-        fontSize: 17,
+        marginTop: 10,
+        textDecorationLine: 'underline',
+        fontSize: 15,
     },
     loginButton:{
-        width: 250,
-        marginTop: 50,
+        width: 340,
+        marginTop: 40,
         padding: 15,
         backgroundColor: '#55bCF6',
         borderRadius: 20,
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     signupWrapper:{
-        marginTop: 15,
+        marginTop: 25,
         flexDirection: 'row',
     },
     signupInfo:{
