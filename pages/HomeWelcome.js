@@ -4,14 +4,21 @@ import { SafeAreaView, View, Text, StyleSheet, Image, ImageBackground, Touchable
 const Home = () => {
   const [showImage, setShowImage] = useState(false);
   const [scaleValue] = useState(new Animated.Value(1));
+  const [slideAnimation] = useState(new Animated.Value(100)); // New animated value for vertical translation
 
   useEffect(() => {
     const timeoutID = setTimeout(() => {
       setShowImage(true);
+      // Start the slide-in animation
+      Animated.timing(slideAnimation, {
+        toValue: 0,
+        duration: 500,
+        useNativeDriver: false,
+      }).start();
     }, 2000);
 
     return () => clearTimeout(timeoutID);
-  }, []);
+  }, [slideAnimation]);
 
   useEffect(() => {
     const breathingAnimation = () => {
@@ -40,7 +47,7 @@ const Home = () => {
     <ImageBackground source={require('../assets/Home_Page_Background.jpg')} style={styles.backgroundImage} blurRadius={5}>
       <SafeAreaView style={styles.Container}>
         {showImage && (
-          <View style={styles.Bottom}>
+          <Animated.View style={[styles.Bottom, { transform: [{ translateY: slideAnimation }] }]}>
             <Text style={styles.welcomeText}>
               Welcome
             </Text>
@@ -56,7 +63,7 @@ const Home = () => {
             <Text style={styles.welcomesubText}>
               Continue
             </Text>
-          </View>
+          </Animated.View>
         )}
       </SafeAreaView>
     </ImageBackground>
