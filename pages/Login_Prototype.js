@@ -12,12 +12,16 @@ const Login = () => {
     const handleLogin = () => {
         navigation.navigate('Landing');
     };
-
     const forgotPass = () => {
         console.log('forgot password is pressed');
-        navigation.navigate('AccountRecovery')
+        navigation.navigate('AccountRecovery');
     };
-
+    const gotoSignUp = () => {
+        navigation.navigate('Signup');
+    };
+    const gotoHome =() => {
+        navigation.navigate('welcomeHome');
+    };
   return (
         <SafeAreaView>
             <View style={styles.navigationBar}>
@@ -43,7 +47,7 @@ const Login = () => {
                         Forgot Password
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.loginButton}>
+                <TouchableOpacity style={styles.loginButton} onPress={gotoHome}>
                     <Text style={styles.loginTextButton}>
                         Login
                     </Text>
@@ -52,7 +56,7 @@ const Login = () => {
                     <Text style={styles.signupInfo}>
                         Don't have an account? 
                     </Text>
-                    <TouchableOpacity style={styles.signupButton}>
+                    <TouchableOpacity style={styles.signupButton} onPress={gotoSignUp}>
                         <Text style={styles.signupText}>
                              Sign up now!
                         </Text>
@@ -84,7 +88,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     loginTextInput:{
-        fontSize: 25,
+        fontSize: 20,
         width: '80%',
         margin: 10,
         backgroundColor: 'white'
@@ -102,10 +106,8 @@ const styles = StyleSheet.create({
         marginTop: 40,
         padding: 15,
         backgroundColor: '#55bCF6',
-        borderRadius: 20,
-        shadowColor:'black',
-        shadowOffset:{width: 0, height: 100},
-        elevation: 5,
+        borderRadius: 25,
+        elevation: 10,
     },
     loginTextButton:{
         color: 'white',

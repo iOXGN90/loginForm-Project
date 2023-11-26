@@ -1,20 +1,19 @@
 import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 function LandingPage() {
     const navigation = useNavigation();
     const handleLoginPress = () => {
     // Navigate to the Login page
-    navigation.navigate('Login_Prototype')
+        navigation.navigate('Login_Prototype')
     };
     const handleSignupPress = () => {
-    navigation.navigate('Signup')
+        navigation.navigate('Signup')
     };
-
   return (
-
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
         <Text style={styles.welcomeText}>
             Welcome to the App!
         </Text>
@@ -30,7 +29,7 @@ function LandingPage() {
                 </Text>
             </TouchableOpacity>
         </View>
-    </View>
+    </SafeAreaView>
   )
 }
 const styles = StyleSheet.create({
@@ -51,24 +50,24 @@ const styles = StyleSheet.create({
     loginButton:{
         marginTop: 20,
         width: 300,
-        height: 55,
-        padding: 10,
+        // height: 55,
+        padding: 15,
         textAlign: 'center',
         backgroundColor:'#55bCF6',
         color:'#FFFFFF',
         fontSize: 25,
         borderRadius: 25,
-        elevation: 5,
+        elevation: 10,
     },
     signupButton:{
         marginTop: 20,
         width: 300,
-        height: 55,
-        padding: 10,
+        // height: 55,
+        padding: 15,
         display: 'flex',
         textAlign: 'center',
         borderRadius: 25,
-        elevation: 5,
+        elevation: 10,
         backgroundColor:'#E8EAED',
     },
     loginText:{

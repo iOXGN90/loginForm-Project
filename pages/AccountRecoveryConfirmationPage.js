@@ -23,23 +23,21 @@ const AccountRecoveryConfirmationPage = () => {
     return (
         <SafeAreaView style={styles.container}>
             <TouchableOpacity style={styles.Header} onPress={backToRecoveryText}>
-                <View>
-                    <IconButton icon={"arrow-left"} color="white" />                 
-                </View>
+                    <IconButton icon={"arrow-left"} color="white"/>                 
             </TouchableOpacity>
             <View style={styles.Body}>
                 {showImage &&(
                     <Image style={styles.checkImage} source={require('../assets/Confirm_Check_Icon.png')} />
                 )}
                 <Text style={styles.confirmText}>
-                    Email Confirmation sent! Please check your email
+                    Email Confirmation sent. Please check your email!
                 </Text>
                 {showImage && (
                     <TouchableOpacity style={styles.loginButton} onPress={backToLoginText}>
                         <IconButton icon={"arrow-left"} color="white" />   
-                            <Text style={styles.loginText}>
-                                Back to login page
-                            </Text>
+                        <Text style={styles.loginText}>
+                            Back to login page
+                        </Text>
                     </TouchableOpacity>
                 )}
             </View>
@@ -77,7 +75,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#55bCF6',
-        borderRadius: 20,
+        borderRadius: 25,
         elevation: 10,
         height: 70,
     },
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
         color: 'white',
         textAlign: 'center',
         fontSize: 22,
-        marginBottom: 4,
+        marginBottom: 4,    
         fontWeight: 'bold',
     },
     checkImage:{
