@@ -3,111 +3,111 @@ import { View, StyleSheet, Text } from 'react-native';
 const HomeContent = () => {
   return (
         <View>
-        <View style={styles.content}>
-          <View style={styles.leftContent}>
-            <Text style={styles.mainText}>
-                This is sample mainText
-            </Text>
-            <Text style={styles.subText}>
-                This is sample subText
-            </Text>
-          </View>
-          <View style={styles.rightContent}>
-            <Text>
-              IMAGE HERE
-            </Text>
-          </View>
-        </View>
-        <View style={styles.content}>
-          <View style={styles.leftContent}>
-          <Text style={styles.mainText}>
-            This is sample mainText
-          </Text>
-          <Text style={styles.subText}>
-            This is sample subText
-          </Text>
-          </View>
-          <View style={styles.rightContent}>
-            <Text>
-              IMAGE HERE
-            </Text>
-          </View>
-        </View>
-        <View style={styles.content}>
-          <View style={styles.leftContent}>
-          <Text style={styles.mainText}>
-            This is sample mainText
-          </Text>
-          <Text style={styles.subText}>
-            This is sample subText
-          </Text>
-          </View>
-          <View style={styles.rightContent}>
-            <Text>
-              IMAGE HERE
-            </Text>
-          </View>
-        </View>
-        <View style={styles.content}>
-          <View style={styles.leftContent}>
-          <Text style={styles.mainText}>
-            This is sample mainText
-          </Text>
-          <Text style={styles.subText}>
-            This is sample subText
-          </Text>
-          </View>
-          <View style={styles.rightContent}>
-            <Text>
-              IMAGE HERE
-            </Text>
-          </View>
-        </View>
-        <View style={styles.content}>
-          <View style={styles.leftContent}>
-          <Text style={styles.mainText}>
-            This is sample mainText
-          </Text>
-          <Text style={styles.subText}>
-            This is sample subText
-          </Text>
-          </View>
-          <View style={styles.rightContent}>
-            <Text>
-              IMAGE HERE
-            </Text>
-          </View>
-        </View>
-        <View style={styles.content}>
-          <View style={styles.leftContent}>
-          <Text style={styles.mainText}>
-            This is sample mainText
-          </Text>
-          <Text style={styles.subText}>
-            This is sample subText
-          </Text>
-          </View>
-          <View style={styles.rightContent}>
-            <Text>
-              IMAGE HERE
-            </Text>
-          </View>
-        </View>
-        <View style={styles.content}>
-          <View style={styles.leftContent}>
-          <Text style={styles.mainText}>
-            This is sample mainText
-          </Text>
-          <Text style={styles.subText}>
-            This is sample subText
-          </Text>
-          </View>
-          <View style={styles.rightContent}>
-            <Text>
-              IMAGE HERE
-            </Text>
-          </View>
-        </View>
+            <View style={styles.content}>
+                <View style={styles.leftContent}>
+                    <Text style={styles.mainText}>
+                        This is sample mainText
+                    </Text>
+                    <Text style={styles.subText}>
+                        This is sample subText
+                    </Text>
+                </View>
+                <View style={styles.rightContent}>
+                    <Text style={styles.imageText}>
+                    IMAGE HERE
+                    </Text>
+                </View>
+            </View>
+            <View style={styles.content}>
+                <View style={styles.leftContent}>
+                    <Text style={styles.mainText}>
+                        This is sample mainText
+                    </Text>
+                    <Text style={styles.subText}>
+                        This is sample subText
+                    </Text>
+                </View>
+                <View style={styles.rightContent}>
+                    <Text style={styles.imageText}>
+                    IMAGE HERE
+                    </Text>
+                </View>
+            </View>
+            <View style={styles.content}>
+                <View style={styles.leftContent}>
+                    <Text style={styles.mainText}>
+                        This is sample mainText
+                    </Text>
+                    <Text style={styles.subText}>
+                        This is sample subText
+                    </Text>
+                </View>
+                <View style={styles.rightContent}>
+                    <Text style={styles.imageText}>
+                    IMAGE HERE
+                    </Text>
+                </View>
+            </View>
+            <View style={styles.content}>
+                <View style={styles.leftContent}>
+                    <Text style={styles.mainText}>
+                        This is sample mainText
+                    </Text>
+                    <Text style={styles.subText}>
+                        This is sample subText
+                    </Text>
+                </View>
+                <View style={styles.rightContent}>
+                    <Text style={styles.imageText}>
+                    IMAGE HERE
+                    </Text>
+                </View>
+            </View>
+            <View style={styles.content}>
+                <View style={styles.leftContent}>
+                    <Text style={styles.mainText}>
+                        This is sample mainText
+                    </Text>
+                    <Text style={styles.subText}>
+                        This is sample subText
+                    </Text>
+                </View>
+                <View style={styles.rightContent}>
+                    <Text style={styles.imageText}>
+                    IMAGE HERE
+                    </Text>
+                </View>
+            </View>
+            <View style={styles.content}>
+                <View style={styles.leftContent}>
+                    <Text style={styles.mainText}>
+                        This is sample mainText
+                    </Text>
+                    <Text style={styles.subText}>
+                        This is sample subText
+                    </Text>
+                </View>
+                <View style={styles.rightContent}>
+                    <Text style={styles.imageText}>
+                    IMAGE HERE
+                    </Text>
+                </View>
+            </View>
+            <View style={styles.content}>
+                <View style={styles.leftContent}>
+                    <Text style={styles.mainText}>
+                        This is sample mainText
+                    </Text>
+                    <Text style={styles.subText}>
+                        This is sample subText
+                    </Text>
+                </View>
+                <View style={styles.rightContent}>
+                    <Text style={styles.imageText}>
+                    IMAGE HERE
+                    </Text>
+                </View>
+            </View>
         </View>
     )
 }
@@ -126,6 +126,8 @@ const styles = StyleSheet.create({
       },
       leftContent:{
         width: '75%',
+        justifyContent: 'center',
+        alignItems: 'start',
       },
       mainText:{
         color: 'white',
@@ -135,8 +137,14 @@ const styles = StyleSheet.create({
         color: 'white',
       },
       rightContent:{
-        width: '25%'
+        width: '25%',
+        alignItems:'center',
+        justifyContent: 'center',
       },
+      imageText:{
+        color: 'white',
+        textAlign: 'center',
+      }
 })
 
 

@@ -29,7 +29,7 @@ const Login = () => {
             </View>
             <View style={styles.container}>
                 <Text style={styles.loginText}>
-                    Login
+                    Welcome back!
                 </Text>
                 <TextInput
                     style={styles.loginTextInput}
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     },
     loginText:{
         fontSize: 40,
-        width: '50%',
+        width: '60%',
         textAlign: 'center',
         marginBottom: 20,
         fontWeight: 'bold',

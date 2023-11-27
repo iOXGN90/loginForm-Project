@@ -8,61 +8,75 @@ const BottomNavigation = () => {
     const Navigation = useNavigation();
 
     const goToLogin = () => {
-        Navigation.navigate('Login');
+        Navigation.navigate('Login_Prototype');
     };
 
   return (
-    <SafeAreaView style={styles.Body} onPress={goToLogin}>
-        <View style={styles.containerLeft}>
+    <View style={styles.Body} onPress={goToLogin}>
+        {/* <TouchableOpacity style={styles.containerLeft}>
             <View style={styles.imageContainer}>
                 <Image style={styles.userIcon} source={require('../../assets/navigation/logout.png')} />
             </View>
             <Text style={styles.logoutText}>
                 Logout
             </Text>
-        </View>
-        <View style={styles.containerRight}>
+        </TouchableOpacity> */}
+        <TouchableOpacity style={styles.containerRight} onPress={goToLogin}>
             <View style={styles.imageContainer}>
                 <Image style={styles.userIcon} source={require('../../assets/navigation/logout.png')} />
             </View>
             <Text style={styles.logoutText}>
                 Logout
             </Text>
-        </View>
-    </SafeAreaView>
+        </TouchableOpacity>
+    </View>
   )
 };
 
 const styles = StyleSheet.create({
     Body:{
-        backgroundColor:'#E8EAED',        
+        // backgroundColor:'#E8EAED',        
         width: '100%',
-        height: '10%',
+        height: '11%',
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         alignItems: 'center',
+        borderRadius: 100,
     },
-    containerLeft:{
-        flexDirection: 'row',
-        width: '50%',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: 50,
+    // containerLeft:{
+    //     borderRadius: 20,
+    //     backgroundColor:'#E8EAED',        
+    //     width: '50%',
+    //     height: 50,
+    //     flexDirection: 'row',
+    //     alignItems: 'center',
+    //     justifyContent: 'center',
+    //     borderLeftWidth: 1,
+    //     marginTop: 85,
+    // },
 
-    },
     containerRight:{
-        width: '50%',
+        borderRadius: 100,
+        backgroundColor:'#E8EAED',        
+        width: '30%',
         height: 50,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        borderLeftColor: 'black',
-        borderLeftWidth: 1,
+        borderRightWidth: 1,
+        borderLeftWidth: 5,
+        borderBottomWidth: 5,
+        borderLeftColor: '#55bCF6',
+        borderBottomColor: '#55bCF6',
+        borderRightColor: '#55bCF6',
+        marginRight: 25,
+        marginBottom: 10,
+        marginTop: 85,
+        elevation: 5,
     },
     imageContainer:{
-        alignContent: 'center',
-        justifyContent: 'center',
-
+        // alignContent: 'center',
+        // justifyContent: 'center',
     },
     userIcon:{
         width: 50,
