@@ -30,7 +30,7 @@ const Home = () => {
           <Notification/>
         </View>
       </View>
-      <ScrollView style={styles.Body}>
+      <ScrollView showsVerticalScrollIndicator={false} style={styles.Body}>
         <HomeContent style={styles.content}/>
       </ScrollView>
       <View style={styles.bottomNavigation}>
