@@ -15,7 +15,10 @@ const LoginPage = () => {
   };
   const goLogin =() =>{
     navigation.navigate('Login_Prototype')
-  }
+  };
+  const accountConfirmation = () =>{
+    navigation.navigate('SignupConfirmation')
+  };
 
   return (
     <SafeAreaView style={styles.Container}>
@@ -44,7 +47,7 @@ const LoginPage = () => {
             placeholder='Password'
             autoCapitalize='none'
           />
-          <TouchableOpacity style={styles.signupButton}>
+          <TouchableOpacity style={styles.signupButton} onPress={accountConfirmation}>
             <Text style={styles.signupText}>
               Sign up
             </Text>

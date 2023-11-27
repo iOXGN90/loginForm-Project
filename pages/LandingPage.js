@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
     signupButton:{
         marginTop: 20,
         width: 300,
-        // height: 55,
         padding: 15,
         display: 'flex',
         textAlign: 'center',
@@ -74,11 +73,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color:'#FFFFFF',
         fontSize: 25,
+        fontWeight: 'bold',
     },
     SignupText:{
         textAlign: 'center',
         color:'black',
         fontSize: 25,
+        fontWeight: 'bold',
+
     }
 }
 )

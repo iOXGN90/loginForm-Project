@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { SafeAreaView, View, Text, StyleSheet, Image, ImageBackground, TouchableOpacity, Animated } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
+  const navigation = useNavigation();
   const [showImage, setShowImage] = useState(false);
   const [scaleValue] = useState(new Animated.Value(1));
-  const [slideAnimation] = useState(new Animated.Value(100)); // New animated value for vertical translation
+  const [slideAnimation] = useState(new Animated.Value(100)); // animated value for vertical translation
 
   useEffect(() => {
     const timeoutID = setTimeout(() => {
@@ -20,7 +22,7 @@ const Home = () => {
     return () => clearTimeout(timeoutID);
   }, [slideAnimation]);
 
-  useEffect(() => {
+  useEffect(() => { //code for breathing effect of arrow 
     const breathingAnimation = () => {
       Animated.loop(
         Animated.sequence([
@@ -38,10 +40,14 @@ const Home = () => {
       ).start();
     };
 
-    breathingAnimation();
+    breathingAnimation(); //Initializes the breathing animation of arrow
 
     return () => scaleValue.stopAnimation();
   }, [scaleValue]);
+
+    const goHomePage = () => { //To navigate to the home page
+      navigation.navigate('HomePage');
+    };
 
   return (
     <ImageBackground source={require('../assets/Home_Page_Background.jpg')} style={styles.backgroundImage} blurRadius={5}>
@@ -54,7 +60,7 @@ const Home = () => {
             <Text style={styles.welcomesubText}>
               Lorem ipsum dolor sit amet, consectetur lorem ipsum dolor sit amet
             </Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={goHomePage}>
               <Animated.Image
                 source={require('../assets/Next_Button.png')}
                 style={[styles.imgNext, { transform: [{ scale: scaleValue }] }]}
@@ -82,6 +88,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   welcomeText: {
+    marginTop: 20,
     fontSize: 50,
   },
   Bottom: {
@@ -89,20 +96,22 @@ const styles = StyleSheet.create({
     height: '40%',
     backgroundColor: 'white',
     width: '100%',
-    top: 650,
+    top: 610,
     borderRadius: 30,
     alignItems: 'center',
   },
   welcomesubText: {
+    marginTop: 10,
     width: '90%',
+    height: 'auto',
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 18,
   },
   imgNext: {
     marginTop: 25,
     marginBottom: 10,
-    height: 50,
-    width: 50,
+    height: 45,
+    width: 45,
   },
 });
 

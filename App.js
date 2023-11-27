@@ -4,10 +4,12 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LandingPage from './pages/LandingPage';
 import SignupPage from './pages/SignupPage';
+import SignupPageConfirmation from './pages/SignupPageConfirmation';
 import Login_Prototype from './pages/Login_Prototype';
 import AccountRecoveryPage from './pages/AccountRecoveryPage';
 import AccountRecoveryConfirmation from './pages/AccountRecoveryConfirmationPage';
 import HomeWelcome from './pages/HomeWelcome';
+import Home from './pages/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,9 +20,11 @@ export default function App() {
         <Stack.Screen name="Landing" component={LandingPage}/>
         <Stack.Screen name="Login_Prototype" component={Login_Prototype}/>
         <Stack.Screen name="Signup" component={SignupPage}/>
+        <Stack.Screen name="SignupConfirmation" component={SignupPageConfirmation}/>
         <Stack.Screen name="AccountRecovery" component={AccountRecoveryPage}/>
         <Stack.Screen name="Account_Recovery_Confirmation" component={AccountRecoveryConfirmation}/>
         <Stack.Screen name="welcomeHome" component={HomeWelcome}/>
+        <Stack.Screen name="HomePage" component={Home}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
