@@ -1,5 +1,7 @@
 import React from 'react'
 import { View, StyleSheet, Text } from 'react-native';
+
+
 const HomeContent = () => {
   return (
         <View>
@@ -110,7 +112,8 @@ const HomeContent = () => {
             </View>
         </View>
     )
-}
+};
+
 const styles = StyleSheet.create({
     content:{
         width: 'relatve',
@@ -123,6 +126,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        elevation: 10,
       },
       leftContent:{
         width: '75%',
@@ -146,6 +150,5 @@ const styles = StyleSheet.create({
         textAlign: 'center',
       }
 })
-
 
 export default HomeContent;
