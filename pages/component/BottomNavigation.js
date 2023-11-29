@@ -74,10 +74,10 @@ const styles = StyleSheet.create({
         marginTop: 85,
         elevation: 5,
     },
-    imageContainer:{
-        // alignContent: 'center',
-        // justifyContent: 'center',
-    },
+    // imageContainer:{
+    //     alignContent: 'center',
+    //     justifyContent: 'center',
+    // },
     userIcon:{
         width: 50,
         height: 50,
