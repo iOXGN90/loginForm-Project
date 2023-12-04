@@ -47,10 +47,6 @@ const styles = StyleSheet.create({
         height: '100%',
         backgroundColor: '#fff',
     },
-    Header:{
-        // design for back arrow.
-    },
-
     Body:{
         justifyContent: 'center',
         alignItems: 'center',

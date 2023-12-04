@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
     loginButton:{
         marginTop: 20,
         width: 300,
-        // height: 55,
         padding: 15,
         textAlign: 'center',
         backgroundColor:'#55bCF6',
@@ -80,7 +79,6 @@ const styles = StyleSheet.create({
         color:'black',
         fontSize: 25,
         fontWeight: 'bold',
-
     }
 }
 )

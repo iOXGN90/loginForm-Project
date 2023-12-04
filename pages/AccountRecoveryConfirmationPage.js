@@ -49,10 +49,6 @@ const styles = StyleSheet.create({
         height: '100%',
         backgroundColor: '#fff',
     },
-    Header:{
-        // design for back arrow.
-    },
-
     Body:{
         justifyContent: 'center',
         alignItems: 'center',
@@ -85,8 +81,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     checkImage:{
-        // position: 'absolute',
-        // top:250,
         marginBottom: 20,
         width: 50,
         height: 50,

@@ -13,14 +13,6 @@ const BottomNavigation = () => {
 
   return (
     <View style={styles.Body} onPress={goToLogin}>
-        {/* <TouchableOpacity style={styles.containerLeft}>
-            <View style={styles.imageContainer}>
-                <Image style={styles.userIcon} source={require('../../assets/navigation/logout.png')} />
-            </View>
-            <Text style={styles.logoutText}>
-                Logout
-            </Text>
-        </TouchableOpacity> */}
         <TouchableOpacity style={styles.containerRight} onPress={goToLogin}>
             <View style={styles.imageContainer}>
                 <Image style={styles.userIcon} source={require('../../assets/navigation/logout.png')} />
@@ -35,7 +27,6 @@ const BottomNavigation = () => {
 
 const styles = StyleSheet.create({
     Body:{
-        // backgroundColor:'#E8EAED',        
         width: '100%',
         height: '11%',
         flexDirection: 'row',
@@ -43,18 +34,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 100,
     },
-    // containerLeft:{
-    //     borderRadius: 20,
-    //     backgroundColor:'#E8EAED',        
-    //     width: '50%',
-    //     height: 50,
-    //     flexDirection: 'row',
-    //     alignItems: 'center',
-    //     justifyContent: 'center',
-    //     borderLeftWidth: 1,
-    //     marginTop: 85,
-    // },
-
     containerRight:{
         borderRadius: 100,
         backgroundColor:'#E8EAED',        
@@ -74,10 +53,6 @@ const styles = StyleSheet.create({
         marginTop: 85,
         elevation: 5,
     },
-    // imageContainer:{
-    //     alignContent: 'center',
-    //     justifyContent: 'center',
-    // },
     userIcon:{
         width: 50,
         height: 50,

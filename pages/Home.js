@@ -50,9 +50,7 @@ const styles = StyleSheet.create({
   Body:{
     width: '90%',
     height: 'auto',
-    // backgroundColor: 'white',
     borderRadius: 20,
-    // justifyContent: 'center',
   },
   navigationBar:{
     width: '100%',
