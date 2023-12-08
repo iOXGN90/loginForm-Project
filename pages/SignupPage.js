@@ -1,71 +1,63 @@
-import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { IconButton, TextInput } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 
-
-
-const LoginPage = () => {
-
+const SignupPage = () => {
   const navigation = useNavigation();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const goBack = () =>{
+  const goBack = () => {
     navigation.pop();
   };
-  const goLogin =() =>{
-    navigation.navigate('Login_Prototype')
-  };
-  const accountConfirmation = () =>{
-    navigation.navigate('SignupConfirmation')
+
+  const accountConfirmation = () => {
+        navigation.navigate('SignupConfirmation');
   };
 
   return (
     <SafeAreaView style={styles.Container}>
       <View style={styles.Header}>
         <TouchableOpacity onPress={goBack}>
-          <IconButton icon={"arrow-left"}/>                 
+          <IconButton icon={'arrow-left'} />
         </TouchableOpacity>
       </View>
 
-        <View style={styles.Body}>
-          <Text style={styles.createAccountText}>
-            Create Account
-          </Text>
-          <TextInput
-            style={styles.signupTextInput}
-            placeholder='Name'
-            autoCapitalize='sentences'
-          />
-          <TextInput
-            style={styles.signupTextInput}
-            placeholder='Email'
-            autoCapitalize='none'
-          />
-          <TextInput
-            style={styles.signupTextInput}
-            placeholder='Password'
-            autoCapitalize='none'
-          />
-          <TouchableOpacity style={styles.signupButton} onPress={accountConfirmation}>
-            <Text style={styles.signupText}>
-              Sign up
-            </Text>
-          </TouchableOpacity>
-          <View style={styles.Bottom}>
-            <Text style={styles.loginInfo}>
-              Already have an account?
-            </Text>
-            <TouchableOpacity onPress={goLogin}>
-              <Text style={styles.loginButton}>
-                Login
-              </Text>
-            </TouchableOpacity>
-          </View>
-        </View>
+      <View style={styles.Body}>
+        <Text style={styles.createAccountText}>Create Account</Text>
+        <TextInput
+          style={styles.signupTextInput}
+          placeholder="Name"
+          autoCapitalize="sentences"
+          value={name}
+          onChangeText={text => setName(text)}
+        />
+        <TextInput
+          style={styles.signupTextInput}
+          placeholder="Email"
+          autoCapitalize="none"
+          value={email}
+          onChangeText={text => setEmail(text)}
+        />
+        <TextInput
+          style={styles.signupTextInput}
+          placeholder="Password"
+          autoCapitalize="none"
+          secureTextEntry
+          value={password}
+          onChangeText={text => setPassword(text)}
+        />
+        <TouchableOpacity style={styles.signupButton} onPress={accountConfirmation}>
+          <Text style={styles.signupText}>Sign up</Text>
+        </TouchableOpacity>
+        {/* Additional UI components */}
+      </View>
     </SafeAreaView>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   Container:{
@@ -126,4 +118,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default LoginPage;
+export default SignupPage;
